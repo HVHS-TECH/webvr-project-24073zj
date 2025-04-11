@@ -6,7 +6,7 @@
 <script>// from https://codepen.io/bryik/pen/jrYBGm
   
   //A-I script:
-
+/*
 const myObject = document.getElementById("rig");
 const animation = document.getElementById("rig").getAttribute("animation");
 
@@ -15,7 +15,7 @@ document.addEventListener('keydown', (event) => {
         myObject.emit('r-pressed');
     }
 });
-/*
+*//*
   animation__1="property: position; from: 0 2 10; to: 0 0 2; dir: normal; dur: 3000; loop: 1;"
   animation__2="property: position; from: 0 0 2; to: 0 2 3; 
   dir: normal; dur: 3000; loop: 1; 
@@ -79,6 +79,17 @@ document.addEventListener('keydown', (event) => {
       <a-entity id="palmTree7" ply-model="src: palmTree.ply" position="25.2 2 -12.1" rotation="270 0 0" scale="3 3 3"></a-entity>
       <a-entity id="palmTree8" ply-model="src: palmTree.ply" position="30.1 2 -29.2" rotation="270 0 0" scale="3 3 3"></a-entity>
       <a-entity id="palmTree9" ply-model="src: palmTree.ply" position="30.1 2 -29.2" rotation="270 0 0" scale="3 3 3"></a-entity>
+
+      <script>
+        const myObject = document.getElementById("rig");
+        const animation = myObject.getAttribute("animation");
+
+        document.addEventListener('keydown', (event) => {
+        if (event.key === 'r') {
+        myObject.emit('r-pressed');
+        }
+        });
+      </script>
     </a-scene>
   </body>
 </html>
