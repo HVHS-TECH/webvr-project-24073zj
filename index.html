@@ -46,7 +46,7 @@ document.addEventListener('keydown', (event) => {
     <a-scene>
       <a-sky color="lightblue"></a-sky>
       <a-entity id="rig" position="30 2 20" rotation="0 90 0"
-      animation="
+      animation__down="
       property: position;
       from: 0 1.6 0;
       to: 0 3 0;
@@ -55,7 +55,18 @@ document.addEventListener('keydown', (event) => {
       loop: 1;
       startEvents: r-pressed;
       animationcomplete: ;
-      ">
+      "
+      animation__up="
+      property: position;
+      from: 0 3 0;
+      to: 0 1.6 0;
+      dur: 1000;
+      dir: normal;
+      loop: 1;
+      startEvents: t-pressed;
+      animationcomplete: ;
+      "
+      >
         <a-entity id="cam" camera wasd-controls look-controls></a-entity>
       </a-entity>
       
@@ -83,11 +94,17 @@ document.addEventListener('keydown', (event) => {
 
       <script>
         const myObject = document.getElementById("rig");
-        const animation = myObject.getAttribute("animation");
+        const animationUp = myObject.getAttribute("animation__up");
+        const animationDown = myObject.getAttribute("animation__down");
 
         document.addEventListener('keydown', (event) => {
         if (event.key === 'r') {
         myObject.emit('r-pressed');
+        }
+        });
+        document.addEventListener('keydown', (event) => {
+        if (event.key === 't') {
+        myObject.emit('t-pressed');
         }
         });
       </script>
