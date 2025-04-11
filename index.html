@@ -9,12 +9,7 @@
 
 const myObject = document.querySelector('#rig');
 const animation = myObject.getAttribute('animation');
-myObject.setAttribute('animation', {
-    property: 'position',
-    to: '0 2 0',
-    dur: 2000,
-    startEvents: 'r-pressed'
-});
+
 
 document.addEventListener('keydown', (event) => {
     if (event.key === 'r') {
@@ -59,7 +54,7 @@ document.addEventListener('keydown', (event) => {
       dur: 10000;
       dir: normal;
       loop: 1;
-      startEvents: ;
+      startEvents: r-pressed;
       ">
         <a-entity id="cam" camera wasd-controls look-controls></a-entity>
       </a-entity>
