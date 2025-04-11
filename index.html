@@ -10,14 +10,14 @@
 const myObject = document.querySelector('#rig'); // Replace with your object's ID
 myObject.setAttribute('animation', {
     property: 'position',
-    to: '0 2 0', // Example: move to position 1, 2, 3
+    to: '0 2 0',
     dur: 2000,
-    startEvents: 'a-pressed'
+    startEvents: 'r-pressed'
 });
 
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'a') { // Trigger animation when 'a' key is pressed
-        myObject.emit('a-pressed');
+    if (event.key === 'r') { // Trigger animation when 'a' key is pressed
+        myObject.emit('r-pressed');
     }
 });
 /*
