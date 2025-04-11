@@ -4,30 +4,23 @@
 <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
 <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script> 
 <script>// from https://codepen.io/bryik/pen/jrYBGm
-  /*var cube = d3.select('#cam');
+  
+  //A-I script:
 
-  cube.on('click', slide);  // Attach event listener
+const myObject = document.querySelector('#rig'); // Replace with your object's ID
+myObject.setAttribute('animation', {
+    property: 'position',
+    to: '1 2 3', // Example: move to position 1, 2, 3
+    dur: 2000,
+    startEvents: 'a-pressed'
+});
 
-  function slide () {
-    var cube = d3.select(this);
-    cube.transition()
-        .duration(2000)
-        .ease('linear')
-        .attrTween('position', function() {
-          return d3.interpolate('0 3.5 -2', '3 2 -2')
-        })
-        .each('end', fade);  // At the end of the transition, fade() is called
-  }
-  function fade () {
-    var cube = d3.select(this);
-    cube.transition()
-        .delay(1000)  // Delay before the cube returns to original position
-        .duration(2000)
-        .ease('linear')
-        .attrTween('position', function() {
-          return d3.interpolate('3 2 -2', '0 3.5 -2')
-        })
-  }
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'a') { // Trigger animation when 'a' key is pressed
+        myObject.emit('a-pressed');
+    }
+});
+/*
   animation__1="property: position; from: 0 2 10; to: 0 0 2; dir: normal; dur: 3000; loop: 1;"
   animation__2="property: position; from: 0 0 2; to: 0 2 3; 
   dir: normal; dur: 3000; loop: 1; 
@@ -62,7 +55,7 @@
         <a-entity id="cam" camera wasd-controls look-controls></a-entity>
       </a-entity>
       
-      <a-box position="0 2.09276 0" scale="0.5 1.6 0.5" material="" geometry=""></a-box>
+      <a-box position="0 1.7 0" scale="0.5 1.6 0.5" material="" geometry=""></a-box>
 
       <a-entity id="enviroment"
       ply-model="src:enviromentv3.ply"
