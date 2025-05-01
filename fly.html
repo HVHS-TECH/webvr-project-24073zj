@@ -11,9 +11,9 @@
       <a-sky color="lightblue"></a-sky>
       <a-entity id="rig" position="0 10 0" rotation="0 90 0">
         <a-entity id="cam" camera wasd-controls="acceleration: 40" look-controls
-        animation__1="
-          from: 10 10 0;
-          to: 0 10 0;
+        animation="
+          from: 50 15 0;
+          to: 10 10 0;
           dur: 5000;
           dir: normal;
           loop: 1;
@@ -66,7 +66,7 @@
       <a-entity position="50 0 0" sound="src:sea-and-seagull-wave.mp3; autoplay: true; refDistance: 20; rolloffFactor:5;"></a-entity>
     </a-scene>
     <script>
-       document.querySelector('a-scene').addEventListener('loaded', function () {document.getElementById("cam").emit('anim2')});
+       //document.querySelector('a-scene').addEventListener('loaded', function () {document.getElementById("cam").emit('anim2')});
     </script>
   </body>
 </html>
