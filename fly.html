@@ -10,21 +10,12 @@
     <a-scene loading-screen="dotsColor:; backgroundColor:">
       <a-sky color="lightblue"></a-sky>
       <a-entity id="rig" position="0 10 0" rotation="0 90 0">
-        <a-entity id="cam" camera wasd-controls="acceleration: 40" look-controls
-        animation="
+        <a-entity id="cam" camera wasd-controls="acceleration: 40" look-controls animation="
           from: 50 15 0;
           to: 10 10 0;
           dur: 5000;
           dir: normal;
-          loop: 1;
-        "animation__2="
-          from: 0 10 0;
-          to: 0 5 0;
-          dur: 5000;
-          dir: normal;
-          loop: 1;
-          startEvents: anim2;
-        "></a-entity>
+          loop: 1;"></a-entity>
       </a-entity>
       <a-assets>
         <a-asset-item id="mainenviroment" src="enviromentv4.ply"></a-asset-item>
