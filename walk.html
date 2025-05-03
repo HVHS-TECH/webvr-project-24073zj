@@ -8,13 +8,7 @@
     <body>
     <a-scene loading-screen>
       <a-sky color="lightblue"></a-sky>
-      <a-entity id="rig" position="0 1.6 0" rotation="0 90 0" animation="
-      from: 50 10 0;
-      to: 10 1.6 0;
-      dur: 5000;
-      dir: normal;
-      loop: 1;
-      ">
+      <a-entity id="rig" position="0 1.6 0" rotation="0 90 0">
         <a-entity id="cam" camera wasd-controls="acceleration: 20" look-controls>
         </a-entity>
       </a-entity>
@@ -54,7 +48,7 @@
       <a-entity id="hill4" ply-model="src: hill2.ply" position="-4.33694 0.58 -60.20403" scale="4 4 4"></a-entity>
       <a-entity id="hill5" ply-model="src: hill2.ply" position="-21.52012 0.58 -59.82679" scale="4 4 4"></a-entity>
       <a-entity id="hill6" ply-model="src: hill2.ply" position="-40.1449 0.58 -61.23342" scale="5 5 5"></a-entity>
-
+      <!--this sound is not mine. It is from freesound_community on pixabay.com-->
       <a-entity position="50 0 0" sound="src:sea-and-seagull-wave.mp3; autoplay: true; refDistance: 20; rolloffFactor:5;"></a-entity>
     </a-scene>
     </script>
